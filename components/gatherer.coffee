@@ -2,7 +2,7 @@ rek = require 'rekuire'
 Question = rek 'models/question'
 
 # csv data imported to mongo with following command:
-# mongoimport --db tomsbot --collection feuddata --type csv --headerline --file feuddata.csv
+# mongoimport --db tomsbot --collection questions --type csv --headerline --file feuddata.csv
 
 module.exports.findAnswersRelatedTo = (query, cb) ->
     Question.find q: $regex: query, $options: "i", (err, questions) ->
