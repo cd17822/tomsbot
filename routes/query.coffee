@@ -9,10 +9,7 @@ router.post '/', (req, res, next) ->
     # tweets = 0
 
     gatherer.findAnswersRelatedTo query, (err, answers) ->
-        if err or answers.length == 0
-            res.render 'results', answers: answers
-        else
-            res.render 'results', answers: answers
+        res.render 'results', answers: answers
 
 # for answer in answers
 #     tweeter.tweet answer, (err, attemptedStatus, tweet, twitterRes) ->
