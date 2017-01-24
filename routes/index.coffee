@@ -1,4 +1,3 @@
-_ = require 'lodash'
 router = (require 'express').Router()
 ### FOR AUTHENTICATION
 rek = require 'rekuire'
@@ -15,6 +14,6 @@ router.use (req,res,next) ->
 ###
 
 router.get '/', (req, res, next) ->
-  res.render 'index', title: 'project'
+  res.render 'index', title: 'tomsbot'
 
 module.exports = router

@@ -3,11 +3,17 @@ mixin endpoint(method, action)
   form(method=method, action=action)
     block
 
+mixin inputHidden(name, value)
+  input.form-control(type='hidden', name=name, value=value)
+
 mixin input(name, value)
   input.form-control(type='text', name=name, value=value)
   br
 
 mixin button(text)
   button.btn(type='submit')=text
+
+mixin buttonFake(text)
+  button.btn.fakeButton(status=text)=text
   br
   br

@@ -4,7 +4,8 @@ mongoose = require 'mongoose'
 bodyParser = require 'body-parser'
 rek = require 'rekuire'
 indexRouter = rek 'routes/index'
-userRouter = rek 'routes/user'
+queryRouter = rek 'routes/query'
+tweetRouter = rek 'routes/tweet'
 configs = rek 'config'
 server = rek 'components/server'
 
@@ -25,7 +26,8 @@ app.set 'views', 'views'
 
 # configure routes
 app.use '/', indexRouter
-app.use '/users', userRouter
+app.use '/query', queryRouter
+app.use '/tweet', tweetRouter
 
 # configure error handling
 app.use (err, req, res, next) ->
@@ -37,5 +39,5 @@ app.use (err, req, res, next) ->
     console.error err
 
 # start server
-PORT = 3005
+PORT = 3022
 app.listen PORT, -> console.log "Listening on #{PORT}"

@@ -1,0 +1,7 @@
+extends layout
+include formbuilder
+
+block form
+    each answer in answers
+        .col-xs-4
+            +buttonFake(answer)

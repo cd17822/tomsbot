@@ -5,3 +5,11 @@ body {
 a, a:hover {
   color: black;
 }
+
+.tweeted {
+    background-color: #BFEB84;
+}
+
+.errored {
+    background-color: #EE6B67;
+}
